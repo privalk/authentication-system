@@ -1,0 +1,19 @@
+{
+  "name": "authentication-system",
+  "version": "1.0.0",
+  "description": "基于Web的用户身份认证系统",
+  "main": "app.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "pp",
+  "license": "MIT",
+  "dependencies": {
+    "aliyun-sdk": "^1.12.9",
+    "axios": "^1.4.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.0",
+    "nodemailer": "^6.9.3"
+  }
+}

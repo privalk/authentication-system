@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Authentication</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+  <h1>User Authentication</h1>
+  <div class="tabs">
+    <button class="register-button" onclick="location.href='/register'">Register</button>
+    <button class="tab" onclick="openTab(event, 'password')">Password</button>
+    <button class="tab" onclick="openTab(event, 'verification')">Verification</button>
+  </div>
+  <div id="password" class="tab-content">
+    <h2>Password Authentication</h2>
+    <form id="passwordForm" action="/login/password" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+  <div id="verification" class="tab-content">
+    <h2>Verification Code Authentication</h2>
+    <form id="verificationForm" action="/login/verification" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br>
+      <label for="code">Verification Code:</label>
+      <input type="text" id="code" name="code" required><br>
+      <input type="submit" value="Login"><br>
+      <input type="email" id="emailInput" placeholder="email">
+    or
+    <input type="tel" id="phoneNumberInput" placeholder="phone">
+    <button class="send-code-button" id="sendCodeButton">send code</button>
+  </div>
+    </form>
+    
+  </div>
+  <script src="/js/script.js"></script>
+</body>
+</html>
