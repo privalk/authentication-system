@@ -98,8 +98,8 @@ const SMSClient = require('@alicloud/sms-sdk');
 
 // 阿里云短信服务配置
 const accessKeyId = 'LTAI5tSRp1m9Yd4BFRbhFk11';
-const accessKeySecret = 'DHlKO99DnTDZgLBZYLD0zngTWVMLZ9';
-const smsClient = new SMSClient({ accessKeyId, accessKeySecret });
+const secretAccessKey = 'DHlKO99DnTDZgLBZYLD0zngTWVMLZ9';
+const smsClient = new SMSClient({ accessKeyId, secretAccessKey });
 
 
 function sendVerificationCodeToPhoneNumber(phoneNumber, verificationCode) {
