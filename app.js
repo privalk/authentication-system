@@ -71,8 +71,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true, 
     auth: {
-        user: '291863911@qq.com',
-        pass: 'veciyzvjayuhcaeh' 
+        user: '',
+        pass: '' 
     }
 });
 
@@ -97,16 +97,16 @@ function sendVerificationCodeToEmail(email, code) {
 const SMSClient = require('@alicloud/sms-sdk');
 
 // 阿里云短信服务配置
-const accessKeyId = 'LTAI5tSRp1m9Yd4BFRbhFk11';
-const secretAccessKey = 'DHlKO99DnTDZgLBZYLD0zngTWVMLZ9';
+const accessKeyId = '';
+const secretAccessKey = '';
 const smsClient = new SMSClient({ accessKeyId, secretAccessKey });
 
 
 function sendVerificationCodeToPhoneNumber(phoneNumber, verificationCode) {
     const params = {
         PhoneNumbers: phoneNumber,
-        SignName: 'ppiiko', // 短信签名
-        TemplateCode: 'SMS_460935807', // 短信模板CODE
+        SignName: '', // 短信签名
+        TemplateCode: '', // 短信模板CODE
         TemplateParam: `{"code": "${verificationCode}"}` // 短信模板变量
     };
 
@@ -202,8 +202,7 @@ app.post('/login/verification', (req, res) => {
 });
 
 app.get('/login/success', (req, res) => {
-    // 在这里处理登录成功页面的逻辑
-    res.send('登录成功页面'); // 替换为实际的登录成功页面的代码或模板
+    res.send('登录成功页面'); 
 });
 
 
